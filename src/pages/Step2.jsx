@@ -8,7 +8,9 @@ import {
   InputBox,
   Button,
 } from './styles/Step2.styles';
-import { episodesPerDay, find_end_date } from '../tvService';
+
+import { episodesPerDay } from '../utils/episodesPerDay';
+import { findEndDate } from '../utils/findEndDate';
 
 export const Step2 = (props) => {
   return (
@@ -35,8 +37,15 @@ export const Step2 = (props) => {
             </InputNum>
           </div>
         </SentenceDiv>
+<<<<<<< HEAD
         <SentenceDiv className='Questions'>
           <h3 className='FillUps text-white'>I want to watch through Season&nbsp;</h3>
+=======
+        <SentenceDiv>
+          <h3 className='text-white fillUps'>
+            I want to watch through Season&nbsp;
+          </h3>
+>>>>>>> 84854461240bf7ba810b18a427f38540b44c3d93
           <InputNum
             value={props.endSeason}
             onChange={(event) =>
@@ -78,30 +87,30 @@ export const Step2 = (props) => {
           <Button
             disabled={!props.canCalculate}
             onClick={() => {
-                if (props.isFinishByDate) {
-                  props.setRate(
-                    episodesPerDay(
-                      props.startSeason,
-                      props.startEp,
-                      props.endSeason,
-                      props.endEp,
-                      props.endDate,
-                      props.showEpisodes
-                    )
-                  );
-                } else if (!props.isFinishByDate) {
-                  props.setEndDate(
-                    find_end_date(
-                      props.startSeason,
-                      props.startEp,
-                      props.endSeason,
-                      props.endEp,
-                      props.rate,
-                      props.showEpisodes
-                    )
-                  );
-                }
-                props.setStep(3);
+              if (props.isFinishByDate) {
+                props.setRate(
+                  episodesPerDay(
+                    props.startSeason,
+                    props.startEp,
+                    props.endSeason,
+                    props.endEp,
+                    props.endDate,
+                    props.showEpisodes
+                  )
+                );
+              } else if (!props.isFinishByDate) {
+                props.setEndDate(
+                  findEndDate(
+                    props.startSeason,
+                    props.startEp,
+                    props.endSeason,
+                    props.endEp,
+                    props.rate,
+                    props.showEpisodes
+                  )
+                );
+              }
+              props.setStep(3);
             }}>
             Calculate!
           </Button>

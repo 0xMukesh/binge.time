@@ -54,7 +54,7 @@ export const Step3 = (props) => {
           </ResultsContainer>
         )}
         <div>
-          <a href='#'>
+          <a href='https://bingetimewith.us/'>
             <Button>Search again!</Button>
           </a>
         </div>
