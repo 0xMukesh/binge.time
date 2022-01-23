@@ -7,12 +7,16 @@ import {
 } from './styles/Step1.styles';
 
 import { ResultRow } from '../components/ResultRow';
-import { searchShow, showInfo, to_episodes_map } from '../tvService';
+import { searchShow } from '../utils/searchShow';
+import { showInfo } from '../utils/showInfo';
+import { toEpisodesMap } from '../utils/toEpisodesMap';
 export const Step1 = (props) => {
   return (
     <>
       <Container>
-        <h1 className='text-white text-center sm:text-5xl' style={{marginBottom:'10px'}}>
+        <h1
+          className='text-white text-center sm:text-5xl'
+          style={{ marginBottom: '10px' }}>
           Search and select your show to begin:
         </h1>
         <SearchBarDiv>
@@ -47,7 +51,7 @@ export const Step1 = (props) => {
           onClick={() => {
             props.setStep(2);
             showInfo(props.showId).then((data) =>
-              props.setShowEpisodes(to_episodes_map(data))
+              props.setShowEpisodes(toEpisodesMap(data))
             );
           }}
           hidden={!props.showId && props.results !== []}

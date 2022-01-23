@@ -19,11 +19,12 @@ function App() {
   const [isFinishByDate, setIsFinishByDate] = useState();
   const [rate, setRate] = useState();
   const [canCalculate, setCanCalculate] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [display, setDisplay] = useState('');
 
   useEffect(() => {
     setCanCalculate((startSeason && startEp && endEp && endSeason) && ((rate && !isFinishByDate) || (endDate && isFinishByDate)))
-  });
+  }, [startSeason, startEp, endEp, endSeason, rate, isFinishByDate, endDate]);
 
   return (
     <div className="App">
