@@ -23,4 +23,4 @@ The fellow developers have also learnt basics of React and how to work with Reac
 ## What's next for  Binge.time
 - Creating a custom API for binge.time which suits for its job
 - Adding a feature which allows to translate the website ✨
--Building a mobile app for it 
+- Building a mobile app for it 
