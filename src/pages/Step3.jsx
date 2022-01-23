@@ -54,7 +54,7 @@ export const Step3 = (props) => {
           </ResultsContainer>
         )}
         <div>
-          <a href='https://bingewatchcalculator.netlify.app/'>
+          <a href='#'>
             <Button>Search again!</Button>
           </a>
         </div>
