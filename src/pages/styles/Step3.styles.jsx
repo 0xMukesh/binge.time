@@ -38,6 +38,10 @@ export const HighlightResult = styled.span`
 
 export const ResultsContainer = styled.div`
   width: 50%;
-  margin: 30px;
-  padding: 30px;
+  margin:20px 0 20px 0;
+
+  @media screen and (max-width: 480px){
+    width:90%;
+    margin:20px 0 20px 0;
+  }
 `;

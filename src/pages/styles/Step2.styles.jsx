@@ -13,6 +13,12 @@ export const HorizontalDiv = styled.div`
   flex-direction: row;
   position: relative;
   margin: 30px 0px;
+  text-align:center;
+
+  @media screen and (max-width: 600px){
+    display:inline-block;
+  }
+
 `;
 
 export const SentenceDiv = styled.div`
@@ -53,6 +59,7 @@ export const Button = styled.button`
 export const StyledH2 = styled.h2`
   justify-self: start;
   //align-self: start;
+  margin-top:20px;
 `;
 
 export const SquareSelect = styled.div`
@@ -69,4 +76,9 @@ export const SquareSelect = styled.div`
   }
   background-color: ${(props) =>
     props.highlighted ? '#7d4e57ff' : 'transparent'};
+  margin-top:20px;
+
+  @media screen and (max-width: 600px){
+    width:100%
+  }
 `;

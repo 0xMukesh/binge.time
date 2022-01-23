@@ -12,12 +12,13 @@ export const Step1 = (props) => {
   return (
     <>
       <Container>
-        <h1 className='text-white mb-5'>
+        <h1 className='text-white text-center sm:text-5xl' style={{marginBottom:'10px'}}>
           Search and select your show to begin:
         </h1>
         <SearchBarDiv>
           <SearchBar
-            size='50'
+            className='SearchBar'
+            size='40'
             onChange={(event) => props.setQuery(event.target.value)}
             value={props.query}
             placeholder='Type the name of a show'></SearchBar>
