@@ -12,7 +12,7 @@ export const SearchBarDiv = styled.div`
   display: flex;
   flex-direction: row;
   width: 60%;
-  
+  margin-top:20px;
   @media screen and (max-width: 700px){
     width: 80%;
     display:block;

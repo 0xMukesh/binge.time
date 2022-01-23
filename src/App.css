@@ -67,9 +67,28 @@ button {
   }
 }
 
-.fillUps{
-  width: 50%;
+
+/*Second Page*/
+.Questions{
+  width: 40%;
+  display: flex;
+  /* background-color: yellow; */
+  text-align: center;
+  
+  @media screen and (max-width: 600px){
+    display:block;
+    text-align:center;
+  }
+}
+
+.FillUps{
+  width: 60%;
   @media screen and (max-width: 480px){
     width:100%;
   }
+}
+.Second{
+  display: flex;
+  width: 50%;
+  float: left;
 }
