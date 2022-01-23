@@ -17,22 +17,26 @@ export const Step2 = (props) => {
         <HorizontalDiv>
           <h1 className='text-white'>{props.show.name}</h1>
         </HorizontalDiv>
-        <SentenceDiv className='text-white'>
-          <h3 className='fillUps'>I am about to start Season&nbsp;</h3>
-          <InputNum
-            value={props.startSeason}
-            onChange={(event) =>
-              props.setStartSeason(event.target.value)
-            }></InputNum>
-          <h3>&nbsp;Episode&nbsp;</h3>
-          <InputNum
-            value={props.startEp}
-            onChange={(event) =>
-              props.setStartEp(event.target.value)
-            }></InputNum>
+        <SentenceDiv className='Questions text-white'>
+          <h3 className='FillUps'>I am about to start Season&nbsp;</h3>
+          <div className='Second'>
+            <InputNum
+              className='InputEp'
+              value={props.startSeason}
+              onChange={(event) =>
+                props.setStartSeason(event.target.value)
+              }></InputNum>
+              <h3>&nbsp;Episode&nbsp;</h3>
+              <InputNum
+              value={props.startEp}
+              onChange={(event) =>
+                props.setStartEp(event.target.value)
+              }>
+            </InputNum>
+          </div>
         </SentenceDiv>
-        <SentenceDiv>
-          <h3 className='text-white fillUps'>I want to watch through Season&nbsp;</h3>
+        <SentenceDiv className='Questions'>
+          <h3 className='FillUps text-white'>I want to watch through Season&nbsp;</h3>
           <InputNum
             value={props.endSeason}
             onChange={(event) =>

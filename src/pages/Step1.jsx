@@ -12,7 +12,7 @@ export const Step1 = (props) => {
   return (
     <>
       <Container>
-        <h1 className='text-white text-center sm:text-5xl' style={{marginBottom:'10px'}}>
+        <h1 className='text-white text-3xl text-center sm:text-5xl' style={{marginBottom:'10px'}}>
           Search and select your show to begin:
         </h1>
         <SearchBarDiv>

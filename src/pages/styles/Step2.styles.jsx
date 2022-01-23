@@ -24,6 +24,11 @@ export const HorizontalDiv = styled.div`
 export const SentenceDiv = styled.div`
   display: flex;
   align-items: baseline;
+  width:70%
+  @media screen and (max-width: 600px){
+    width:100%;
+    display:block;
+  }
 `;
 
 export const TVImage = styled.img`
@@ -47,6 +52,7 @@ export const InputNum = styled.input`
   background-color: transparent;
   color: white;
   border: 2px solid ${border};
+  font-size:20px;
 `;
 
 export const Button = styled.button`
@@ -76,7 +82,7 @@ export const SquareSelect = styled.div`
   }
   background-color: ${(props) =>
     props.highlighted ? '#7d4e57ff' : 'transparent'};
-  margin-top:20px;
+  margin-top:10px;
 
   @media screen and (max-width: 600px){
     width:100%
