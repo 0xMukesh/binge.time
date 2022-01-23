@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
-* {
-  overflow-y: hidden;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -32,9 +29,23 @@ body {
   font-family: 'Roboto Mono', sans-serif;
 }
 
+.searchBar{
+  font-family: 'Roboto Mono', sans-serif;
+  width: 80%;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 10px 15px;
+
+  @media screen and (max-width: 400px){
+    display:none;
+  }
+}
 input {
   font-family: 'Roboto Mono', sans-serif;
   font-size: 16px;
+  margin-right: 10px;
+  outline: none;
+  border: none;
 }
 
 button {
@@ -53,5 +64,12 @@ button {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.fillUps{
+  width: 50%;
+  @media screen and (max-width: 480px){
+    width:100%;
   }
 }
